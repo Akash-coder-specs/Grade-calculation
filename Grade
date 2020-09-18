@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Gradecalculation {
+
+	public static void main(String[] args) {
+		int a,b,c;
+Scanner sc=new Scanner(System.in);
+sout s=new sout();
+s.s("Maths : ");
+a=sc.nextInt();
+s.s("physics: ");
+b=sc.nextInt();
+s.s("Chemistry: ");
+c=sc.nextInt();
+int avg=(a+b+c)/3;
+s.s("The average mark you got is: "+avg);
+grade g=new grade();
+s.s("Your grade is: ");
+g.Grade(avg);
+}
+}
+class grade{
+	void Grade(int a){
+		sout s=new sout();
+		if(a>90 && a<=100)
+		{
+			s.s("Grade A");
+		}
+		else if(a>80 && a<=90)
+		{
+			s.s("Grade B");
+		}
+		else if(a>70 && a<=80) {
+			s.s("Grade c");
+		}
+		else if(a>60 && a<=70) {
+			s.s("Grade D");
+		}
+		else if(a>50 && a<=60) {
+			s.s("Grade E");
+		}
+		else {
+			s.s("Fail");
+		}
+	}
+}
+class sout{
+	void s(Object o) {
+		System.out.println(o);
+	}
+}
